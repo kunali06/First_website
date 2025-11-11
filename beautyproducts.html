@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Beauty</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #f9c5d1, #ffe6eb);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #ffede7;
+    }
+
+    .navbar-brand {
+      letter-spacing: 2px;
+      color: #c24244;
+      font-weight: bold;
+      font-size: 2em;
+    }
+
+    .navbar-brand:hover {
+      color: #181717;
+    }
+
+    .nav-link {
+      color: #8a471a;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover {
+      background-color: palevioletred;
+      color: white !important;
+      border-radius: 10px;
+      transform: scale(1.05);
+    }
+
+    .form-control {
+      width: 250px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .btn-search {
+      width: 90px;
+      border-radius: 15px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background-color: rgb(205, 128, 154);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+      height: 100%; /* Fills flex height */
+    }
+
+    /* Make parent full height using flexbox */
+    .main-content {
+      flex: 1;
+      display: flex;
+      min-height: calc(100vh - 150px); /* Adjusts below navbar */
+    }
+
+    /* Card */
+    .card {
+      border: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      height: 300px;
+      object-fit: cover;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+
+    .btn-buy {
+      background-color: rgb(221, 109, 146);
+      color: white;
+      font-weight: 500;
+      border-radius: 10px;
+    }
+
+    .btn-buy:hover {
+      background-color: rgb(200, 80, 120);
+      color: white;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ffede7;
+      color: #8a471a;
+      padding: 20px 0;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    footer i {
+      margin: 0 10px;
+      color: #c24244;
+      transition: 0.3s;
+    }
+
+    footer i:hover {
+      color: #181717;
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">Your Beauty</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExample"
+        aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarExample">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
+          <li class="nav-item"><a class="nav-link" href="#">Shop Online</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">New Collection</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Collaboration</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+        </ul>
+
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search">
+          <button class="btn btn-outline-dark btn-search" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Section -->
+  <div class="container-fluid main-content"><!-- UPDATED -->
+    <div class="row flex-grow-1 w-100"><!-- UPDATED -->
+
+      <!-- Sidebar -->
+      <div class="col-lg-2 col-md-3 sidebar d-flex flex-column justify-content-center">
+        MENU
+      </div>
+
+      <!-- Products Section -->
+      <div class="col-lg-10 col-md-9 py-4">
+        <div class="container">
+          <!--  FIRST ROW OF CARDS -->
+          <div class="row justify-content-center g-4">
+
+            <!-- Card 1 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card text-center">
+                <img src="foundation.png" alt="Foundation">
+                <div class="card-body">
+                  <h5 class="card-title">Lumi-Matte Foundation</h5>
+                  <p class="card-text">Super Stay Lumi-Matte delivers buildable coverage and up to 30hr wear.</p>
+                  <h5>₹200</h5>
+                  <a href="#" class="btn btn-buy">Buy Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card text-center">
+                <img src="mac_foundatn.png" alt="MAC Foundation">
+                <div class="card-body">
+                  <h5 class="card-title">MAC Foundation</h5>
+                  <p class="card-text">Studio Fix Fluid SPF 15 matte foundation for oily skin.</p>
+                  <h5>₹2000</h5>
+                  <a href="#" class="btn btn-buy">Buy Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card text-center">
+                <img src="bareglow.png" alt="Bare Glow">
+                <div class="card-body">
+                  <h5 class="card-title">Bare Glow SPF60</h5>
+                  <p class="card-text">Intense sun protection without stickiness, perfect finish.</p>
+                  <h5>₹950</h5>
+                  <a href="#" class="btn btn-buy">Buy Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card text-center">
+                <img src="nabilafoundatn.png" alt="Nabila Foundation">
+                <div class="card-body">
+                  <h5 class="card-title">Nabila Foundation</h5>
+                  <p class="card-text">Super Stay Lumi-Matte with smooth coverage and long wear.</p>
+                  <h5>₹200</h5>
+                  <a href="#" class="btn btn-buy">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--  SECOND ROW OF CARDS -->
+          <div class="row justify-content-center g-4 mt-2">
+            <!-- Card 5 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card text-center">
+                <img src="lancomefoundn.png" alt="Lancome">
+                <div class="card-body">
+                  <h5 class="card-title">Lancome Teint Idole</h5>
+                  <p class="card-text">Ultra Wear Foundation SPF35 for long-lasting radiance.</p>
+                  <h5>₹4500</h5>
+                  <a href="#" class="btn btn-buy">Buy Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card text-center">
+                <img src="sephorafondn.png" alt="Sephora Foundation">
+                <div class="card-body">
+                  <h5 class="card-title">Sephora Collection</h5>
+                  <p class="card-text">Glow version of BEST SKIN EVER with a radiant finish.</p>
+                  <h5>₹2100</h5>
+                  <a href="#" class="btn btn-buy">Buy Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card text-center">
+                <img src="fitme.png" alt="Fit Me Foundation">
+                <div class="card-body">
+                  <h5 class="card-title">Maybelline Fit Me</h5>
+                  <p class="card-text">Natural tone matte foundation for everyday wear.</p>
+                  <h5>₹499</h5>
+                  <a href="#" class="btn btn-buy">Buy Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card text-center">
+                <img src="revlon.png" alt="Revlon Foundation">
+                <div class="card-body">
+                  <h5 class="card-title">Revlon 24H Stay</h5>
+                  <p class="card-text">Full coverage foundation with SPF protection.</p>
+                  <h5>₹799</h5>
+                  <a href="#" class="btn btn-buy">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <p>© 2025 Your Beauty | All Rights Reserved</p>
+      <div>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-youtube"></i>
+      </div>
+    </div>
+  </footer>
+
+  <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
