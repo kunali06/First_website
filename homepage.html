@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Beauty</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+   <style>
+  body{
+    background: linear-gradient(to bottom right, #f9c5d1, #ffe6eb);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* navbar */
+  .navbar{
+    background-color: #ffede7 ;
+  }
+  .navbar.brand{
+    letter-spacing: 2px;
+    color: #c24244;
+    font-weight: bold;
+    font-size: 2em;
+  }
+  .navbar.brand:hover{
+    color:#181717 ;
+  }
+  .nav-link{
+    color:  #8a471a;
+    transition: 0.3s;
+   margin:10px 0 0 10px  ;
+  }
+  .nav-link:hover{
+    background-color:  palevioletred;
+    color: white !important;
+    border-radius: 10px;
+    transform: scale(1.05);
+  }
+  .form-control{
+    width: 250px;
+    border-radius: 20px;
+    text-align: center;
+  }
+  .btn-search{
+    width: 90px;
+    border-radius: 15px;
+  }
+
+  /* sidebar */
+
+   .sidebar{
+    background-color: palevioletred;
+    color: white !important;
+    padding: 2rem 1rem;
+    font-weight: bold;
+    font-size: 19px;
+    text-align: left;
+    height: 100%;
+    box-shadow: 2px 2px 10px rgb(168, 84, 112); 
+   }
+   
+   .sidebar ul{
+    padding: 0;
+    list-style: none;
+   }
+   .sidebar li{
+    padding: 10px 15px ;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+   transition: all 0.3s ease;
+    cursor: pointer;
+   }
+   .sidebar li i{
+    margin-right: 20px;
+    font-size: 2em;
+   }
+   .sidebar li:hover{
+    background-color: white;
+    color: black;
+    transform: translateX(10px);
+   }
+   /* maincontent */
+  .main-content{
+    flex: 1;
+    display: flex;
+    min-height: calc(100vh-150px);
+  }
+  .card{
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px  rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover{
+      transform: translateY(-7px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+  .card img {
+      height: 300px;
+      object-fit: cover;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+ .btn-buy {
+      background-color: rgb(221, 109, 146);
+      color: white;
+      font-weight: 500;
+      border-radius: 10px;
+    }
+
+    .btn-buy:hover{
+      background-color: rgb(200, 80, 120) ;
+      color: white;
+    }
+    footer{
+       background-color: #ffede7;
+      color: #8a471a;
+      padding: 20px 0;
+      text-align: center;
+      font-weight: 500;
+    }
+    footer i {
+      margin: 0 10px;
+      color: #c24244;
+      transition: 0.3s;
+    }
+     footer i:hover {
+      color: #181717;
+      transform: scale(1.2);
+    }
+    
+   
+
+   </style>
+
+</head>
+<body>
+  <!-- navbar -->
+    <!-- Professional Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top" style="background-color: #ffede7;">
+    <div class="container">
+      <!-- Brand -->
+
+      <!-- <a class="navbar-brand fw-bold text-uppercase" href="#" style="color:#c24244; letter-spacing: 2px;height: 70px;">
+        <i class="bi bi-flower1 me-2"></i>Your Beauty
+      </a> -->
+
+      <!-- logo -->
+  <a href="YourBeauty.html"><img src="kunaliLogo.jpg" style="height: 70px; width: 150px;border-radius: 15px; position: relative; right: 50px;"></a>
+
+      <!-- Mobile Toggler -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExample"
+        aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarExample">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-semibold" style="font-weight: 500; font-size: larger;">
+          <li class="nav-item"><a class="nav-link px-3" href="YourBeauty.html" style="color:#8a471a;">Home </a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="loginPage.html" style="color:#8a471a;">Login </a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="Registration.html" style="color:#8a471a;">Regestration </a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="AboutUs.html" style="color:#8a471a;">About Us</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#" style="color:#8a471a;">Collaboration</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="ContactUs.html" style="color:#8a471a;">Contact Us</a></li>
+        </ul>
+
+        <!-- Search Box -->
+        <form class="d-flex">
+          <input class="form-control me-2 text-center" type="search" placeholder="Search">
+          <button class="btn btn-dark rounded px-3" type="submit">
+            <i class="bi bi-search"></i> Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+ <!-- carusal card -->
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="carausal1.jpg" height="500px" width="600px" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="carusal2.png" height="500px" width="600px" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="carusal3.png" height="500px" width="600px" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- main section -->
+
+<div class="container-fluid main-content">
+  <div class="row flex-grow-1 w-100">
+
+ <!-- sidebar -->
+      <div class="col-lg-2 col-md-3 sidebar  ">
+ 
+      <ul >
+        <li><i class="bi bi-house-heart-fill"></i>Dashboard</li>     
+        <li><i class="bi bi-bag-heart-fill"></i>Shop</li>       
+        <li><i class="bi bi-gem"></i>New Arrivals</li>      
+        <li><i class="bi bi-people-fill"></i>Best Seller</li>     
+        <li><i class="bi bi-envelope-heart-fill"></i>Contacts</li>       
+        <li><i class="bi bi-info-circle-fill"></i>About</li>
+      </ul>   
+     </div>
+     
+
+<!-- Product Section -->
+     <div class="col-lg-10 col-md-9 py-4">
+        <div class="container">
+          <!-- first row of card -->
+          <div class="row justify-content-center g-4" >
+
+            <!-- Card 1 -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card text-center">
+                <img src="sephorafondn.png" alt="foundation">
+                <div class="card-body">
+                  <h5 class="card-title">Lumi-Matte Foundation</h5>
+                  <p>Super Stay Lumi-Matte delivers buildable coverage.</p>
+                  <h5>₹200</h5>
+                  <a href="#" class="btn btn-buy">Buy Now</a>
+                </div>
+              </div>
+            </div>
+
+           <!-- card 2 -->
+
+           <div class="col-sm-6 col-md-4 col-lg-3">
+             <div class="card text-center">
+              <img src="mac_foundatn.png" alt="Mac foundation">
+              <div class="card-body">
+                <h5 class="card-title">MAC Foundation</h5>
+                <p class="card-text">Studio Fix Fluid SPF 15 matte foundation for oily skin.</p>
+                <h5>₹2000</h5>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+              </div>
+             </div>
+           </div>
+
+          <!-- card 3 -->
+           <div class="col-sm-6 col-md-4 col-lg-3">
+             <div class="card text-center">
+               <img src="bareglow.png" alt="Bare Glow">
+               <div class="card-body">
+                <h5 class="card-title">Bare Glow SPF60</h5>
+                <p class="card-text">Intense sun protection without stickiness, perfect finish.</p>
+                <h5>₹950</h5>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+               </div>
+             </div>
+           </div>
+           <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card text-center">
+              <img src="nabilafoundatn.png" alt="nabila foundation">
+              <div class="card-body">
+                <h5 class="card-title">Nabila foundation</h5>
+                <p class="card-text">Super Stay Lumi-Matte with smooth coverage and long wear.</p>
+                <h5>₹2000</h5>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+              </div>
+            </div>
+           </div>
+          </div>
+
+         <!-- Second Row of card -->
+       
+         <div class="row justify-content-center g-4 mt-2 ">
+          <!-- card 5 -->
+           <div class="col-sm-6 col-md-4 col-lg-3">
+             <div class="card text-center">
+              <img src="lancomefoundn.png" alt="lamcome">
+              <div class="card-body">
+                <h5 class="card-title">Lancome Teint Idole</h5>
+                <p class="card-text">Ultra Wear Foundation SPF35 for long-lasting radiance.</p>
+                <h5>₹4500</h5>
+                <a href="#" class="btn btn-buy">Buy Now</a>
+              </div>
+             </div>
+           </div>
+
+              <!-- card 6 -->
+               <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card text-center">
+                  <img src="sephorafondn.png" alt="sephore foundation">
+                  <div class="card-body">
+                    <h5 class="card-title">sephora collection</h5>
+                    <p class="card-text">Glow version of BEST SKIN EVER with a radiant finish. </p>
+                    <h5>₹2100</h5>
+                      <a href="#" class="btn btn-buy">Buy Now</a>
+                  </div>
+                 </div>
+               </div>
+            <!-- card 7 -->
+             <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card text-center">
+                <img src="chanelfound.png"  alt="mamaearth">
+                <div class="card-body">
+                    <h5 class="card-title">Chanel Foundation</h5>
+                     <p class="card-text">ULTIMATE RADIANCE-GENERATING SERUM FOUNDATION</p>
+                     <h5>₹15,500</h5>
+                     <a href="#" class="btn btn-buy">Buy Now</a>
+                </div>
+              </div>
+             </div>
+
+         <!-- card 8 -->
+         <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card text-center">
+            <img src="dragdickaf.png" alt="drag dickf">
+            <div class="card-body">
+              <h5 class="card-title">drag dickaf</h5>
+              <p class="card-text">Full coverage foundation with SPF protection.</p>
+              <h5>₹799</h5>
+              <a href="#" class="btn btn-buy">Buy Now</a>
+            </div>
+           </div>
+          </div> 
+         </div>
+
+
+        </div>
+     </div>
+  </div>
+</div>
+
+<!-- footer -->
+ <footer>
+  <div>
+    <p>© 2025 Your Beauty | All Rights Reserved</p>
+    <div>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-youtube"></i>
+    </div>
+  </div>
+  
+ </footer>
+
+</body>
+<script src="bootstrap.bundle.min.js"></script>
+</html>
